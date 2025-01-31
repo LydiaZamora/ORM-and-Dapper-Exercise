@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 
+
 namespace ORM_Dapper
 {
     public class Program
