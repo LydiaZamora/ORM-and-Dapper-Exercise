@@ -21,11 +21,15 @@ namespace ORM_Dapper
 
             var departmentRepo = new DapperDepartmentRepository(conn);
 
+            //departmentRepo.AddDepartment("CSharp - 51");
+
             var departments = departmentRepo.GetAllDepartments();
 
             foreach(var department in departments)
             {
-                Console.WriteLine($"ID: {department.DepartmentID} | Name: {department.Name}");
+                Console.WriteLine
+                    ($"ID: {department.DepartmentID} " +
+                    $"| Name: {department.Name}");
             }
         }
     }
