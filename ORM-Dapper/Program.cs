@@ -35,7 +35,11 @@ namespace ORM_Dapper
 
             var productRepo = new ProductRepository(conn);
 
-            productRepo.CreateProduct("Coding Computer", 1000.00, 1, false, 500);
+            // productRepo.CreateProduct("Coding Computer", 1000.00, 1, false, 500);
+
+            //productRepo.UpdateProduct(940, "Video Game", 70.00, 8, true, 400);
+
+            //productRepo.DeleteProduct(940);
 
             var products = productRepo.GetAllProducts();
 

@@ -16,11 +16,12 @@ namespace ORM_Dapper.Data
 
         public void CreateProduct(string name, double price, int categoryId, bool onSale, int stockLevel)
         {
-            _connection.Execute("INSERT INTO products (Name, Price,CategoryID, OnSale, StockLevel) VALUES(@name, @price @categoryId,@onSale, @stockLevel)",
-                param: new {name, price, categoryId,stockLevel});
+            _connection.Execute("INSERT INTO products (Name, Price, CategoryID, OnSale, StockLevel) VALUES(@name, @price, @categoryId,@onSale, @stockLevel)",
+                param: new {name, price, categoryId, onSale,stockLevel});
         }
 
-       
+ 
+
         public void DeleteProduct(int productId)
         {
             _connection.Execute("DELETE FROM reviews WHERE ProductID = @productId", param: new {productId });
